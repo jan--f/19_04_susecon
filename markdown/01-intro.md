@@ -20,11 +20,11 @@
 
 <!-- .slide: data-state="normal" id="intro-ceph" data-menu-title="Ceph Introduction" -->
 ## Ceph Introduction
-* Distributed storage system based on RADOS
+* **Distributed storage system based on RADOS**
   * Scalable
   * Fault tolerant
   * Self-healing and self-managing
-* Various client access modes
+* **Various client access modes**
   * Object storage
   * remote block device
   * POSIX compatible file system
@@ -33,7 +33,7 @@
 
 <!-- .slide: data-state="normal" id="intro-arch" data-menu-title="Ceph Introduction" -->
 ## Ceph Architecture
-<img alt="Ceph Architecture" src="images/ceph-architecture.png" height="80%"/>
+<img alt="Ceph Architecture" src="images/ceph-architecture.png"/>
 
 
 <!-- .slide: data-state="normal" id="intro-arch" data-menu-title="Ceph Introduction" -->
