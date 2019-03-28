@@ -18,6 +18,10 @@
 </div>
 
 
+<!-- .slide: data-state="normal" id="intro-agenda" data-menu-title="Agenda" -->
+## Agenda
+
+
 <!-- .slide: data-state="normal" id="intro-ceph" data-menu-title="Ceph Introduction" -->
 ## Ceph Introduction
 * **Distributed storage system based on RADOS**
@@ -30,17 +34,37 @@
   * POSIX compatible file system
   * _Your applicaton_
 
+Note:
+* Originates from a research project at UC Santa Cruz Storage Research Systems Center
+
 
 <!-- .slide: data-state="normal" id="intro-arch" data-menu-title="Ceph Introduction" -->
 ## Ceph Architecture
 <img alt="Ceph Architecture" src="images/ceph-architecture.png"/>
 
+Note:
+* Rados is a K/V store based on the CRUSH algorithm
+* Implements a form of rendezvous hashing to place data
+* Implemented by two daemons MONs and OSDs
+* MONs keep consensus on where data is/belongs
+* OSDs store data
 
-<!-- .slide: data-state="normal" id="intro-arch" data-menu-title="Ceph Introduction" -->
+
+<!-- .slide: data-state="normal" id="cephfs-arch" data-menu-title="Ceph Introduction" -->
+## CephFS Architecture
+<img style="max-width: 85%;" alt="CephFS Architecture" src="images/cephfs_arch.png"/>
+
+Note:
+* MDS - daemon that manages metadata
+* data and metadata is still stored in ceph
+* clients talk to OSDs directly
+
+
+<!-- .slide: data-state="normal" id="cephfs-arch" data-menu-title="Ceph Introduction" -->
 ## CephFS Introduction
 
 <h3>
-POSIX compatible clustered file system atop Ceph
+POSIX compatible clustered file system atop Ceph.
 </h3>
 
 * File access is important in storage

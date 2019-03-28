@@ -13,7 +13,7 @@ Reveal.initialize({
     slideNumber: true,
     progress: true,
     history: true,
-    center: false,
+    center: true,
 
     defaultTiming: 120,
 
