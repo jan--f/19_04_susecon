@@ -3,8 +3,8 @@
 Reveal.initialize({
     // If you change these, make sure $aspect-ratio in the .scss file
     // is updated accordingly:
-    width: 1600,
-    height: 900,
+    width: 1920,
+    height: 1080,
 
     margin: 0.01,
 
