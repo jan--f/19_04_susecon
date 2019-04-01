@@ -83,8 +83,12 @@ ceph.[file|dir].layout.[pool|pool_namespace|stripe_unit|stripe_count|object_size
 
 <!-- .slide: data-state="normal" id="intro-features" data-menu-title="Agenda" -->
 ## Snapshots
-* snapshot a directory tree
-* Magic `.snap` directory (name can be configured)
-* Take a snapshot: `mkdir .snap/my_snapshots`
-* List snapshots: `ls .snap/`
-* Delete a snapshot: `rmdir .snap/my_snapshots`
+* Snapshot a directory tree
+* Fast creation - data writeback is asynchronous
+* Magic `.snap` directory
+
+```bash
+mkdir .snap/my_snapshot # Take a snapshot called my_snapshot
+ls .snap/               # List snapshots
+rmdir .snap/my_snapshot # Remove snapshot
+```
