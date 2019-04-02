@@ -1,5 +1,9 @@
+<!-- .slide: data-state="section-break-2" id="Performance" data-timing="10s" -->
+# Performance
+
+
 <!-- .slide: class="col-container" data-state="normal" id="perf-intro" data-menu-title="Performance" -->
-## Performance
+## Basic hardware performance
 
 <div class="col-container">
 
@@ -58,3 +62,12 @@ Note:
 
 <!-- .slide: class="col-container" data-state="normal" id="perf-experiment" data-menu-title="Experiment description" -->
 ## Work loads
+
+### Two experiments
+
+* Single file
+  * Each client (thread) operates on a single 20GB file
+* Many files
+  * Each client (thread) operates on 100 4MB files
+
+Job matrix has 3 dimensions: IO operation, block size and number of threads

@@ -21,21 +21,28 @@
 <!-- .slide: data-state="normal" id="intro-agenda" data-menu-title="Agenda" -->
 ## Agenda
 
+* Quick intro
+* Spotlight on a few (new) features
+* Samba Gateway
+* Performance numbers
+
 
 <!-- .slide: data-state="normal" id="intro-ceph" data-menu-title="Ceph Introduction" -->
 ## Ceph Introduction
 * **Distributed storage system based on RADOS**
-  * Scalable
+  * Scalability by design
   * Fault tolerant
   * Self-healing and self-managing
-* **Various client access modes**
+* **Unified storage cluster**
   * Object storage
-  * remote block device
-  * POSIX compatible file system
+  * Block Storage
+  * File system (POSIX compatible)
   * _Your applicaton_
 
 Note:
 * Originates from a research project at UC Santa Cruz Storage Research Systems Center
+* POSIX compatible means not fully compliant but in reality no impact (ext is
+  alos not fully compliant)
 
 
 <!-- .slide: data-state="normal" id="intro-arch" data-menu-title="Ceph Introduction" -->
@@ -58,18 +65,3 @@ Note:
 * MDS - daemon that manages metadata
 * data and metadata is still stored in ceph
 * clients talk to OSDs directly
-
-
-<!-- .slide: data-state="normal" id="cephfs-arch" data-menu-title="Ceph Introduction" -->
-## CephFS Introduction
-
-<h3>
-POSIX compatible clustered file system atop Ceph.
-</h3>
-
-* File access is important in storage
-  * Allows existing applications to utilize Ceph storage
-  * Interoperability with existing infrastructure
-  * Directories and permissions
-  * Elastic capacity
-
