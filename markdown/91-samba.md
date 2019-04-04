@@ -36,7 +36,7 @@ Note:
 
 <!-- .slide: data-state="normal" id="samba-gw-intro-arch" data-menu-title="Samba Gateway for CephFS" -->
 ## Samba Gateway for CephFS
-<img alt="Samba Gateway for CephFS" src="images/ceph-samba/samba-intro-arch.png"\>
+<img alt="Samba Gateway for CephFS" src="images/ceph-samba/ceph-samba-arch.png"\>
 
 Note:
 * diag should also show ceph\_snapshots and winbind?
@@ -70,6 +70,11 @@ Note:
 * Location determined by hash of key and active node map
 * data master moves around based on use
 * future: Witness protocol + Persistent handles for seamless failover
+
+
+<!-- .slide: data-state="normal" id="ctdb-gw-arch" data-menu-title="Clustering with CTDB Architecture" -->
+## Clustering with CTDB
+<img alt="Clustered Samba Gateway for CephFS" src="images/ceph-samba/ceph-ctdb-arch.png"\>
 
 
 <!-- .slide: data-state="normal" id="gw-limitations" data-menu-title="Gateway Limitations" -->
