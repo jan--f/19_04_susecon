@@ -18,6 +18,13 @@
 </div>
 
 
+<!-- .slide: data-state="normal" id="qrcode-intro" data-menu-title="QR code" data-timing="0" -->
+
+<div class="qrcode" id="qrcode-talk-intro"/>
+<h2 style="text-align: center;"><a href="https://jan--f.github.io/19_04_susecon/" target="_blank"
+       id="talk-intro">https://jan--f.github.io/19_04_susecon/</a></h2>
+
+
 <!-- .slide: data-state="normal" id="intro-agenda" data-menu-title="Agenda" -->
 ## Agenda
 
