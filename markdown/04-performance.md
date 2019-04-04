@@ -100,6 +100,18 @@ Read/Write</td>
 <img alt="Client memory utilisation" src="images/cephfs_client_mem.png"/>
 
 
+<!-- .slide: data-state="normal" class="full-screen" id="samba-bandwidth" data-menu-title="Samba Bandwidth" data-timing="10s" -->
+<img alt="Samba bandwidth" src="images/samba_bw.png"/>
+
+
+<!-- .slide: data-state="normal" class="full-screen" id="samba-iops" data-menu-title="Samba IOps" data-timing="10s" -->
+<img alt="Samba IOps" src="images/samba_iops.png"/>
+
+
+<!-- .slide: data-state="normal" class="full-screen" id="samba-lats" data-menu-title="Samba latencies" data-timing="10s" -->
+<img alt="Samba latencies" src="images/samba_lats.png"/>
+
+
 <!-- .slide: data-state="section-break" id="fin" data-timing="60s" -->
 # Thank you - Questions?
 
