@@ -35,7 +35,14 @@
 
 </div>
 
-### Raw device performance
+### OSD devices
+* 2 x Intel® SSD DC P3700 Series 800GB, 1/2 Height PCIe 3.0, 20nm, MLC
+* 5 x Intel® SSD DC S3700 Series 400GB, 2.5in SATA 6Gb/s, 25nm, MLC
+
+Note:
+* 5 SSDs and 2 NVMes per node
+* Total of 80 OSDs
+
 <table>
 <tr>
 <td></td><td>4k Random Read/Write</td><td>4k Sequential Read/Write</td><td>4m Sequential
@@ -49,7 +56,6 @@ Read/Write</td>
 </tr>
 </table>
 
-Note:
 <h3>Tuning</h3>
 <ul>
 <li>Enable `blk-mq` IO scheduler</li>
@@ -57,17 +63,38 @@ Note:
 <li>Alter a number of kernel level networking parameters</li>
 </ul>
 
-* 6 SSDs and 2 NVMes per node
-
 
 <!-- .slide: class="col-container" data-state="normal" id="perf-experiment" data-menu-title="Experiment description" -->
 ## Work loads
 
-### Two experiments
+### Experiments
 
-* Single file
-  * Each client (thread) operates on a single 20GB file
-* Many files
-  * Each client (thread) operates on 100 4MB files
+* Each client (thread) operates on 100 4MB files
+* Sequential IO in 4k and 4M blocksizes
+* `fsync` every 64 IO operations
+* 10 minutes runtime with 2 minutes ramp time
+* 7 clients, various process counts per client
 
-Job matrix has 3 dimensions: IO operation, block size and number of threads
+
+<!-- .slide: data-state="normal" class="full-screen" id="cephs-bandwidth" data-menu-title="CephFS Bandwidth" data-timing="10s" -->
+<img alt="CephFS bandwidth" src="images/cephfs_bw.png"/>
+
+
+<!-- .slide: data-state="normal" class="full-screen" id="cephfs-iops" data-menu-title="CephFS IOps" data-timing="10s" -->
+<img alt="CephFS IOps" src="images/cephfs_iops.png"/>
+
+
+<!-- .slide: data-state="normal" class="full-screen" id="cephfs-lats" data-menu-title="CephFS latencies" data-timing="10s" -->
+<img alt="CephFS latencies" src="images/cephfs_lats.png"/>
+
+
+<!-- .slide: data-state="normal" class="full-screen" id="osd-load" data-menu-title="OSD Load" data-timing="10s" -->
+<img alt="OSD load" src="images/osd_host_load.png"/>
+
+
+<!-- .slide: data-state="normal" class="full-screen" id="client-cpu" data-menu-title="Client CPU" data-timing="10s" -->
+<img alt="Client cpu utilisation" src="images/cephfs_client_cpu.png"/>
+
+
+<!-- .slide: data-state="normal" class="full-screen" id="client-ram" data-menu-title="Client memory utilisation" data-timing="10s" -->
+<img alt="Client memory utilisation" src="images/cephfs_client_mem.png"/>
