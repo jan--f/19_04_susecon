@@ -113,6 +113,13 @@ Many Thanks to
 </div>
 
 
+<!-- .slide: data-state="normal" id="qrcode" data-menu-title="QR code" data-timing="0" -->
+
+<div class="qrcode" id="qrcode-talk"/>
+<h2 style="text-align: center;"><a href="https://jan--f.github.io/19_04_susecon/" target="_blank"
+       id="talk">https://jan--f.github.io/19_04_susecon/</a></h2>
+
+
 <!-- .slide: data-state="normal" id="aux-fio" data-menu-title="fio example job" data-timing="10s" -->
 # fio example job
 
