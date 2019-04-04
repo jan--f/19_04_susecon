@@ -98,3 +98,40 @@ Read/Write</td>
 
 <!-- .slide: data-state="normal" class="full-screen" id="client-ram" data-menu-title="Client memory utilisation" data-timing="10s" -->
 <img alt="Client memory utilisation" src="images/cephfs_client_mem.png"/>
+
+
+<!-- .slide: data-state="section-break" id="fin" data-timing="60s" -->
+# Thank you - Questions?
+
+<div style="color: #02d35f; padding-top: 300px;">
+<span style="font-weight: bold;">
+Many Thanks to
+<a style="color: #02d35f !important;" href="https://github.com/aspiers/presentation-template">Adam Spiers</a> ,
+<a style="color: #02d35f !important;" href="https://github.com/fghaas/presentation-template/">Florian Haas</a> and 
+<a style="color: #02d35f !important;" href="https://github.com/hakimel/reveal.js/">Hakim El-Hattab and contributors</a>
+</span>
+</div>
+
+
+<!-- .slide: data-state="normal" id="aux-fio" data-menu-title="fio example job" data-timing="10s" -->
+# fio example job
+
+```
+[global]
+directory=/run/ceph_bench/1:/run/ceph_bench/2:/run/ceph_bench/3:/run/ceph_bench/4:/run/ceph_bench/5:/run/ceph_bench/6:/run/ceph_bench/7
+unlink=1
+wait_for_previous=1
+filesize=4m
+nrfiles=100
+ramp_time=2m
+time_based=1
+runtime=10m
+#size shouldn't be reached due to runtime
+size=100G
+fsync=64
+numjobs=64
+
+[64rw_4k_rw]
+rw=rw
+blocksize=4k
+```
