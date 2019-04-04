@@ -61,9 +61,14 @@ ceph.[file|dir].layout.[pool|pool_namespace|stripe_unit|stripe_count|object_size
 ```
 
 ### Caveats
-* File and dir layout are inherited at creation time
+* File and dir layout are inherited at creation time - don't apply to existing
+  inodes
 * Clients need the `p` flag in their cephx key to set quota and layout
   restrictions
+
+Note:
+* some xattrs require prior actions - setting layou.pool requires additional
+  data pool
 
 
 <!-- .slide: data-state="normal" id="quotas-features" data-menu-title="Quotas" -->
@@ -86,9 +91,19 @@ ceph.[file|dir].layout.[pool|pool_namespace|stripe_unit|stripe_count|object_size
 * Snapshot a directory tree
 * Fast creation - data writeback is asynchronous
 * Magic `.snap` directory
+* Clients need `s` flag in their cephx key
 
 ```bash
 mkdir .snap/my_snapshot # Take a snapshot called my_snapshot
 ls .snap/               # List snapshots
 rmdir .snap/my_snapshot # Remove snapshot
 ```
+
+```
+client.0
+    key: AQAz7EVWygILFRAAdIcuJ12opU/JKyfFmxhuaw==
+    caps: [mds] allow rw, allow rws path=/bar
+    caps: [mon] allow r
+    caps: [osd] allow rw tag cephfs data=cephfs_a
+```
+<!-- .element: class="fragment" data-fragment-index="1" -->
