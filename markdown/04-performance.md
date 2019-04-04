@@ -16,7 +16,7 @@
   <li>16 OSD daemons per node – 1 per SSD, 5 per NVME</li>
   <li>3 MON/MDS nodes – 24 cores – 128 GB RAM</li>
   </ul></li>
-<li>9 client nodes
+<li>7 client nodes
   <ul>
   <li>16 cores – 64 GB RAM</li>
   </ul></li>
@@ -28,8 +28,8 @@
 <ul>
 <li>25G networking, 25G to 100G interfaces</li>
 <li>Client node -> OSD node 25Gbit/s</li>
-<li>Multiple client nodes -> OSD node 72 Mbit/s</li>
-<li>OSD Node -> OSD Node 68 Mbit/s</li>
+<li>Multiple client nodes -> OSD node 72 Gbit/s</li>
+<li>OSD Node -> OSD Node 68 Gbit/s</li>
 </ul>
 </div>
 
